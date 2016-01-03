@@ -1,6 +1,3 @@
-/**
- * Created by dulin on 2017/7/6.
- */
 import MyService from './module';
 const myService: MyService = new MyService();
 

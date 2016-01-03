@@ -1,5 +1,5 @@
-//模块导出使用export default ClassA, 导入使用import ClassA from '../classA'会报错\
-//https://github.com/kulshekhar/ts-jest/issues/120
+// 模块导出使用export default ClassA, 导入使用import ClassA from '../classA'会报错\
+// https://github.com/kulshekhar/ts-jest/issues/120
 
 import { ClassA } from '../../classA';
 
@@ -32,7 +32,7 @@ describe('mockFn test suites', () => {
   });
 
   describe('mockFn.mock.instances', () => {
-    //mockFn.mock.instances是一个数组，包含了所有从jest.fn()实例化的对象
+    // mockFn.mock.instances是一个数组，包含了所有从jest.fn()实例化的对象
 
     it('A mock function that has been instantiated twice would have the following mock.instances array', () => {
       const mockFn = jest.fn();
@@ -57,9 +57,9 @@ describe('mockFn test suites', () => {
   });
 
   describe('mockFn.mockClear()', () => {
-    //重置mockFn.mock.calls和 mockFn.mock.instances中的数据
-    //如果要在两个断言之间进行一些清理工作，使用这个方法比较合适
-    //执行mockFn.mockClear()将会替换mockFn.mock，而不仅仅是清空mockFn.mock.calls 和 mockFn.mock.instances, 因此，需要避免把mockFn.mock赋值给其他变量，以防止通过该变量访问到老旧数据
+    // 重置mockFn.mock.calls和 mockFn.mock.instances中的数据
+    // 如果要在两个断言之间进行一些清理工作，使用这个方法比较合适
+    // 执行mockFn.mockClear()将会替换mockFn.mock，而不仅仅是清空mockFn.mock.calls 和 mockFn.mock.instances, 因此，需要避免把mockFn.mock赋值给其他变量，以防止通过该变量访问到老旧数据
 
     it('Resets all information stored in the mockFn.mock.calls and mockFn.mock.instances arrays.', () => {
       const mockFn = jest.fn();
@@ -68,7 +68,7 @@ describe('mockFn test suites', () => {
       expect(mockFn.mock.calls[0]).toEqual(['emilie', 26]);
       expect(mockFn.mock.calls).toHaveLength(1);
 
-      //在下个expect断言之前进行mockFn的清理工作
+      // 在下个expect断言之前进行mockFn的清理工作
       mockFn.mockClear();
 
       expect(mockFn.mock.calls[0]).toBeUndefined();
@@ -77,10 +77,10 @@ describe('mockFn test suites', () => {
   });
 
   describe('mockFn.mockReset()', () => {
-    //替换mockFn.mock，重置所有mock信息，包括mockFn.mock.instances和mockFn.mock.calls，以及mockFn的实现
+    // 替换mockFn.mock，重置所有mock信息，包括mockFn.mock.instances和mockFn.mock.calls，以及mockFn的实现
 
     it('Resets all information stored in the mock, including any inital implementation given.', () => {
-      //给mockImplementation传入一个方法，用来实现该mockFn的功能
+      // 给mockImplementation传入一个方法，用来实现该mockFn的功能
       const mockFn = jest.fn().mockImplementation((name: string) => `HI! ${name.toUpperCase()}`);
 
       const a: string = mockFn('emilie');
@@ -106,7 +106,7 @@ describe('mockFn test suites', () => {
   describe('mockFn.mockRestore()', () => {});
 
   describe('mockFn.mockImplementation(fn)', () => {
-    //给mockImplementation传入一个方法，用来实现该mockFn的功能
+    // 给mockImplementation传入一个方法，用来实现该mockFn的功能
 
     it(
       'Accepts a function that should be used as the implementation of the mock. ' +
@@ -126,7 +126,7 @@ describe('mockFn test suites', () => {
         expect(mockFn.mock.calls[1]).toEqual([2]);
         expect(mockFn.mock.calls).toHaveLength(2);
 
-        //清理mockFn.mock.instances和mock
+        // 清理mockFn.mock.instances和mock
         mockFn.mockClear();
 
         expect(mockFn.mock.calls).toHaveLength(0);
@@ -143,7 +143,7 @@ describe('mockFn test suites', () => {
   });
 
   describe('mockFn.mockImplementationOnce(fn)', () => {
-    //给mockImplementationOnce传入一个方法，用来实现该mockFn的功能，但是只对一次调用生效，一次调用完，就清除该实现方法
+    // 给mockImplementationOnce传入一个方法，用来实现该mockFn的功能，但是只对一次调用生效，一次调用完，就清除该实现方法
     it(
       'Accepts a function that will be used as an implementation of the mock for one call to the mocked function. ' +
         'Can be chained so that multiple function calls produce different results.',
@@ -200,7 +200,7 @@ describe('mockFn test suites', () => {
   });
 
   describe('mockFn.mockReturnValue(value)', () => {
-    //mock一个值
+    // mock一个值
 
     // it('Deprecated: Use jest.fn(() => value) instead.', () => {
 
