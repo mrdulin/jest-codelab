@@ -36,7 +36,7 @@ describe('EditPolicy', () => {
     expect(patchWorkContextSpy).toBeCalledWith({ user: {}, services: [], body: { Context_UID: 1 }, id: 1 });
   });
 
-  it('Test patchPolicy function with context body', async () => {
+  it('Test patchPolicy function without context body', async () => {
     const patchWorkContextSpy = jest.spyOn(PolicyModels, 'patchWorkContext');
     wrapper.find('EditPolicy').setState({
       data: {
