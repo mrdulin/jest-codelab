@@ -1,8 +1,7 @@
-/**
- * Created by dulin on 2017/7/6.
- */
+import { IUser } from '../interfaces/user';
 export default class User {
-  constructor(public name: string) {
-
+  public name: string = '';
+  constructor(private user: IUser) {
+    this.name = this.user.name;
   }
 }

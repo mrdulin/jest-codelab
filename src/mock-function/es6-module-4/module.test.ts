@@ -5,11 +5,10 @@ import MyService from './module';
 const myService: MyService = new MyService();
 
 describe('mock function test suites', () => {
-
   it('t-1', () => {
-    const methods: PropertyKey[] = Reflect
-      .ownKeys(Reflect.getPrototypeOf(myService))
-      .filter((fn: PropertyKey) => fn !== 'constructor');
+    const methods: PropertyKey[] = Reflect.ownKeys(Reflect.getPrototypeOf(myService)).filter(
+      (fn: PropertyKey) => fn !== 'constructor'
+    );
 
     console.log(methods);
 
@@ -33,5 +32,4 @@ describe('mock function test suites', () => {
     expect(myService.getMessage()).toBe('Her name is Aimee, age is 99');
     expect((myService.genName as jest.Mock<string>).mock.calls.length).toBe(3);
   });
-
 });

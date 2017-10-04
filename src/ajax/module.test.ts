@@ -3,10 +3,9 @@ jest.mock('./request');
 import * as user from './user.service';
 
 describe('ajax test suites', () => {
-  it('works with promises', () => {
+  it('works with promises', async () => {
     expect.assertions(1);
-    const p = user.getUserName(4);
-    console.log(p);
-    return p.then((data) => expect(data).toEqual('Mark'));
+    const data = await user.getUserName(4);
+    expect(data).toEqual('Mark');
   });
 });

@@ -3,6 +3,10 @@
  */
 import User from '../models/User';
 
-export interface IUser {
+export interface IUserMap {
   [index: number]: User;
+}
+
+export interface IUser {
+  name: string;
 }

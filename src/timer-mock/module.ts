@@ -1,4 +1,4 @@
-function timerGame(callback: () => void) {
+function timerGame(callback?: () => void) {
   console.log('Ready....go!');
   setTimeout(() => {
     console.log('Times up -- stop!');
@@ -8,4 +8,4 @@ function timerGame(callback: () => void) {
   }, 1000);
 }
 
-module.exports = timerGame;
+export { timerGame };

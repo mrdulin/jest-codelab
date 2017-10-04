@@ -5,6 +5,3 @@ export function getMessage(num: number): string {
 export function genName(num: number): string {
   return 'novaline';
 }
-
-
-
