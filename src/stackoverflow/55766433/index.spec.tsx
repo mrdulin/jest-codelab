@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './';
+import Button from '.';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 
