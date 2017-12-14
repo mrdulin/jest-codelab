@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisplayData should not fetch data when query is empty string 1`] = `<ul />`;
+
+exports[`DisplayData should show new entries when query is set 1`] = `
+<ul>
+  <li>
+    <a
+      href="haha.com"
+    >
+      haha
+    </a>
+  </li>
+</ul>
+`;
