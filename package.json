@@ -1,0 +1,28 @@
+{
+  "name": "jest-codelab",
+  "version": "1.0.0",
+  "description": "Learning javascript unit test framework - Jest by examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --no-cache",
+    "test:w": "jest --watch --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrdulin/jest-codelab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrdulin/jest-codelab/issues"
+  },
+  "homepage": "https://github.com/mrdulin/jest-codelab#readme",
+  "devDependencies": {
+    "@types/jest": "^23.3.3",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.1"
+  }
+}
