@@ -4,7 +4,7 @@
   "description": "Learning javascript unit test framework - Jest by examples",
   "main": "index.js",
   "scripts": {
-    "test": "jest --no-cache",
+    "test": "jest --detectOpenHandles",
     "test:w": "jest --watch --verbose"
   },
   "repository": {
