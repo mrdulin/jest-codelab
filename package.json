@@ -13,7 +13,7 @@
     "url": "git+https://github.com/mrdulin/jest-codelab.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "mrdulin <novaline.dulin@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mrdulin/jest-codelab/issues"
@@ -28,5 +28,6 @@
     "ts-jest": "^23.10.4",
     "tslint": "^5.11.0",
     "typescript": "^3.1.1"
-  }
+  },
+  "dependencies": {}
 }
