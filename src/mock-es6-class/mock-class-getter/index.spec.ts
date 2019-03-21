@@ -1,7 +1,4 @@
-/**
- * Created by dulin on 2017/7/6.
- */
-import Component from './module';
+import Component from '../Component';
 const comp = new Component();
 
 Object.defineProperty(comp, 'isBottom', {
@@ -9,13 +6,11 @@ Object.defineProperty(comp, 'isBottom', {
 });
 
 describe('component test suites', () => {
-  
   it('t-1', () => {
     expect(comp.isBottom).toBeFalsy();
   });
-  
+
   it('t-2', () => {
     expect(comp.render()).toBeFalsy();
   });
-  
 });
