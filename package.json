@@ -2,7 +2,7 @@
   "name": "jest-codelab",
   "version": "1.0.0",
   "description": "Learning javascript unit test framework - Jest by examples",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "jest --detectOpenHandles",
     "test:w": "jest --watch"
