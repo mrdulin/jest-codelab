@@ -1,7 +1,4 @@
-/**
- * Created by dulin on 2017/7/6.
- */
-import User from '../models/User';
+import User from '../user.model';
 
 export interface IUserMap {
   [index: number]: User;

@@ -1,6 +1,6 @@
-import * as http from 'http';
+import http from 'http';
 
-export default function request(url: string) {
+function request<T>(url: string): Promise<T> {
   return new Promise(resolve => {
     http.get(
       { path: url },
@@ -12,3 +12,5 @@ export default function request(url: string) {
     );
   });
 }
+
+export default request;

@@ -1,1 +1,10 @@
 node_modules
+coverage
+.env
+
+npm-debug.log
+npm-debug.log*
+yarn-error.log*
+
+.idea
+.DS_STORE
