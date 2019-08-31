@@ -1,5 +1,5 @@
 jest.mock('./loadDataFromLocalStorage.ts');
-import { someModule } from './';
+import { someModule } from '.';
 
 describe('someModule', () => {
   it('t1', () => {

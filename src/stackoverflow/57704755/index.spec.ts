@@ -1,4 +1,4 @@
-import { main } from './';
+import { main } from '.';
 import { apiClient } from './apiClient';
 
 describe('main', () => {

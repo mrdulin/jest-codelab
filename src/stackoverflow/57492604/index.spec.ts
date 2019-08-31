@@ -1,4 +1,4 @@
-import { Service, FundMock } from './';
+import { Service, FundMock } from '.';
 
 const service = new Service();
 

@@ -1,4 +1,4 @@
-import { SubscriberInterceptor } from './';
+import { SubscriberInterceptor } from '.';
 
 const interceptor = new SubscriberInterceptor();
 

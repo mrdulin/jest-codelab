@@ -1,4 +1,4 @@
-import { Component } from './';
+import { Component } from '.';
 
 const mockClient = {
   items: jest.fn().mockReturnThis(),
