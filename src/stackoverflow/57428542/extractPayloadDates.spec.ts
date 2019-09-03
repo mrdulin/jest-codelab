@@ -1,7 +1,12 @@
 import { extractPayloadDates } from './extractPayloadDates';
-import { Agent } from './Agent';
+import { Agent, Chatter } from './Agent';
 
-const agent = new Agent();
+const webhookMock = jest.fn();
+const chatter: jest.Mocked<Chatter> = {
+  getMessage: jest.fn()
+};
+
+const agent = new Agent(webhookMock, chatter);
 
 describe('extractPayloadDates', () => {
   it('should only mock getParameter method of agent', () => {
