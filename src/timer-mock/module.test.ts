@@ -36,17 +36,14 @@ describe('timer mock test suites', () => {
     expect(callback.mock.instances).toHaveLength(0);
   });
 
-  // TODO:
-  // test('calls the callback after 5 second via runTimersToTime', () => {
-  //
-  //   expect(callback).not.toHaveBeenCalled();
-  //
-  //   tg(callback);
-  //
-  //   jest.runTimersToTime(500);
-  //
-  //   expect(callback).toHaveBeenCalled();
-  //   expect(callback.mock.calls).toHaveLength(1);
-  //
-  // });
+  test.todo('calls the callback after 5 second via runTimersToTime', () => {
+    expect(callback).not.toHaveBeenCalled();
+
+    timerGame(callback);
+
+    jest.runTimersToTime(500);
+
+    expect(callback).toHaveBeenCalled();
+    expect(callback.mock.calls).toHaveLength(1);
+  });
 });
