@@ -1,7 +1,6 @@
 import { status } from './ajax';
 import axios from 'axios';
 
-const originalGet = axios.get;
 axios.get = jest.fn();
 
 describe('ajax', () => {
@@ -15,7 +14,7 @@ describe('ajax', () => {
   });
 
   afterEach(() => {
-    axios.get = originalGet;
+    axios.get = jest.requireActual('axios').get;
   });
 
   it('calls status with a login and logout url', async () => {
