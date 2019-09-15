@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App t1 1`] = `
+<div
+  onKeyDown={[Function]}
+>
+  x:
+  0
+  ,y:
+  0
+</div>
+`;
+
+exports[`App t1 2`] = `
+<div
+  onKeyDown={[Function]}
+>
+  x:
+  -1
+  ,y:
+  0
+</div>
+`;
+
+exports[`App t1 3`] = `
+<div
+  onKeyDown={[Function]}
+>
+  x:
+  -1
+  ,y:
+  1
+</div>
+`;
+
+exports[`App t1 4`] = `
+<div
+  onKeyDown={[Function]}
+>
+  x:
+  0
+  ,y:
+  1
+</div>
+`;
+
+exports[`App t1 5`] = `
+<div
+  onKeyDown={[Function]}
+>
+  x:
+  0
+  ,y:
+  0
+</div>
+`;
