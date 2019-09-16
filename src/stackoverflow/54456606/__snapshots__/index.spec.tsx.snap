@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchComponent should search and filter job list correctly 1`] = `"<div><input type=\\"text\\" id=\\"searchJob\\" class=\\"form-control-sm border-0 flex-grow-1\\" value=\\"Lead\\" placeholder=\\"Technology / Job title\\"/><i class=\\"fa fa-search search-job\\"></i><ul class=\\"job-list\\"><li><span>jdName: Senior/ Lead UI Developer</span><span>technology: java</span></li></ul></div>"`;
