@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchFilter t1 1`] = `"<div class=\\"search-w bp3-input-group\\"><span class=\\"bp3-icon bp3-icon-search\\"></span><input type=\\"text\\" class=\\"bp3-input\\" value=\\"foo\\" placeholder=\\"Search input\\" dir=\\"auto\\"/></div>"`;
