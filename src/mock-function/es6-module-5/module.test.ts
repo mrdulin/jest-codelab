@@ -33,14 +33,11 @@ describe('mock function test suites', () => {
   it('t-3', () => {
     const getAgeImplementation = (): number => 99;
     type MKeyOfIObj = keyof IObj;
-    type valueOfIObj = IObj[MKeyOfIObj];
-    const getAgeSpyInstance: jest.MockInstance<valueOfIObj> = jest.spyOn<IObj, MKeyOfIObj>(m, 'getAge');
-
-    const getAgeSpy: jest.Mock<valueOfIObj> = getAgeSpyInstance.mockImplementation(getAgeImplementation);
+    const getAgeSpyInstance = jest.spyOn<IObj, MKeyOfIObj>(m, 'getAge').mockImplementation(getAgeImplementation);
     expect(m.getMessage()).toBe('Her name is Aimee, age is 99');
-    expect(getAgeSpy).toHaveBeenCalled();
+    expect(getAgeSpyInstance).toHaveBeenCalled();
 
-    getAgeSpy.mockReset();
+    getAgeSpyInstance.mockReset();
     getAgeSpyInstance.mockRestore();
   });
 

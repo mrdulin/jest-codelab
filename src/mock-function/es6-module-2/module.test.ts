@@ -8,6 +8,7 @@ function mockFunctions() {
   };
 }
 jest.mock('./module', () => mockFunctions());
+// tslint:disable-next-line: no-var-requires
 const m = require('./module');
 
 describe('mock function', () => {
@@ -21,14 +22,13 @@ describe('mock function', () => {
     expect(m.genName.mock.calls.length).toBe(1);
   });
 
-  // it('t-2', () => {
-  //   //mock失败, 注意看module中getMessage调用genName的方式
-  //   console.log(m.genName());
-  //   expect(m.getMessage(1)).toBe('Her name is emilie');
-  //
-  // });
-  //
-  // it('t-3', () => {
-  //   expect(m.genName.mock.calls.length).toBe(2);
-  // });
+  // mock失败, 注意看module中getMessage调用genName的方式
+  it.skip('t-2', () => {
+    console.log(m.genName());
+    expect(m.getMessage(1)).toBe('Her name is emilie');
+  });
+
+  it.skip('t-3', () => {
+    expect(m.genName.mock.calls.length).toBe(2);
+  });
 });
