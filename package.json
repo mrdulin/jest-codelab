@@ -12,7 +12,13 @@
     "type": "git",
     "url": "git+https://github.com/mrdulin/jest-codelab.git"
   },
-  "keywords": [],
+  "keywords": [
+    "unit testing",
+    "testing",
+    "jestjs",
+    "mock",
+    "enzyme"
+  ],
   "author": "mrdulin <novaline.dulin@gmail.com>",
   "license": "ISC",
   "bugs": {

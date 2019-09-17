@@ -5,5 +5,6 @@ module.exports = {
   setupFilesAfterEnv: ['jest-enzyme'],
   testEnvironmentOptions: {
     enzymeAdapter: 'react16'
-  }
+  },
+  coverageReporters: ['json', 'text', 'lcov', 'clover']
 };
