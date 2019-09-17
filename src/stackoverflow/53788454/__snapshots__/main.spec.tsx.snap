@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main t1 1`] = `
+<div
+  className="main"
+>
+  <section>
+    <CustomComponent
+      movies={Array []}
+    />
+  </section>
+</div>
+`;
+
+exports[`Main t1 2`] = `
+<div
+  className="main"
+>
+  <section>
+    <CustomComponent
+      movies={
+        Array [
+          "data1",
+          "data2",
+        ]
+      }
+    />
+  </section>
+</div>
+`;
