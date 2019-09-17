@@ -3,5 +3,3 @@ export class ClassA {
     return message;
   }
 }
-
-
