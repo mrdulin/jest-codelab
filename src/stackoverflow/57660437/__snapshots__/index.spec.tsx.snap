@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header t1 1`] = `
+<div>
+  Mon Aug 26 2019 19:55:03 GMT+0800 (China Standard Time)
+</div>
+`;
