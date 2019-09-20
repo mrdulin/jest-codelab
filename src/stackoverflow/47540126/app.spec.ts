@@ -3,7 +3,7 @@ import request from 'supertest';
 import * as moduleA from './moduleA';
 
 describe('app', () => {
-  test('Those should work', async () => {
+  test.only('Those should work', async () => {
     const response = await request(app)
       .post('/signup')
       .send({ password: 'pw' });
