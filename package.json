@@ -78,6 +78,8 @@
     "react-native-payments": "^0.7.1",
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
   }
 }
