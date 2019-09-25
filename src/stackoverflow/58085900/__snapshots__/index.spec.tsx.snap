@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SomeComponent check submit 1`] = `
+exports[`SomeComponent #handleSubmit check submit 1`] = `
 <div>
   <form
     onSubmit={[Function]}
@@ -35,7 +35,7 @@ exports[`SomeComponent check submit 1`] = `
 </div>
 `;
 
-exports[`SomeComponent should alert when first name is invalid 1`] = `
+exports[`SomeComponent #handleSubmit should alert when first name is invalid 1`] = `
 <div>
   <form
     onSubmit={[Function]}
@@ -70,7 +70,7 @@ exports[`SomeComponent should alert when first name is invalid 1`] = `
 </div>
 `;
 
-exports[`SomeComponent should alert when last name is invalid 1`] = `
+exports[`SomeComponent #handleSubmit should alert when last name is invalid 1`] = `
 <div>
   <form
     onSubmit={[Function]}

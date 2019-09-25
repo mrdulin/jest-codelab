@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import fetch from 'node-fetch';
+import console = require('console');
 
 export interface ISomeComponentState {
   firstName: string;
@@ -82,7 +84,22 @@ export class SomeComponent extends Component<any, ISomeComponentState> {
   }
 
   private getFullName() {
-    const { firstName, lastName } = this.state;
-    return firstName + ' ' + lastName;
+    // const urlendPoint = new URL('https://github.com/mrdulin');
+
+    const params = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName
+    };
+
+    const urlendPoint = `https://github.com/mrdulin?fistName=${params.firstName}&lastName=${params.lastName}`;
+
+    // (urlendPoint as any).search = new URLSearchParams(params);
+
+    return fetch(urlendPoint)
+      .then(response => response.json())
+      .then(data => data)
+      .catch(error => {
+        alert('Please check the names and try again');
+      });
   }
 }
