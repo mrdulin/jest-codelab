@@ -90,8 +90,9 @@ export class SomeComponent extends Component<any, ISomeComponentState> {
       firstName: this.state.firstName,
       lastName: this.state.lastName
     };
+    console.log(123, params);
 
-    const urlendPoint = `https://github.com/mrdulin?fistName=${params.firstName}&lastName=${params.lastName}`;
+    const urlendPoint = `https://github.com/mrdulin?firstName=${params.firstName}&lastName=${params.lastName}`;
 
     // (urlendPoint as any).search = new URLSearchParams(params);
 

@@ -86,16 +86,17 @@ describe('SomeComponent', () => {
       wrapper.setState({ firstName: 'du', lastName: 'lin' });
       const actualValue = await (wrapper.instance() as any).getFullName();
       expect(actualValue).toEqual({ data: 'mocked data' });
-      expect(fetch).toBeCalledWith(`https://github.com/mrdulin?fistName=du&lastName=lin`);
+      expect(fetch).toBeCalledWith(`https://github.com/mrdulin?firstName=du&lastName=lin`);
     });
 
     it('should alert when fetch data error', async () => {
       const mockedFetchError = new Error('some error');
       (fetch as jest.MockedFunction<typeof fetch>).mockRejectedValueOnce(mockedFetchError);
       wrapper.setState({ firstName: 'lin', lastName: 'du' });
+
       const actualValue = await (wrapper.instance() as any).getFullName();
       expect(actualValue).toBeUndefined();
-      expect(fetch).toBeCalledWith(`https://github.com/mrdulin?fistName=du&lastName=lin`);
+      expect(fetch).toBeCalledWith(`https://github.com/mrdulin?firstName=lin&lastName=du`);
       expect(alertSpy).toBeCalledWith('Please check the names and try again');
     });
   });
