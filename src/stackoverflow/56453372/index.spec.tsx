@@ -25,8 +25,11 @@ describe('XComponent', () => {
     ${'/Songs'}     | ${'Songs'}
     ${'/Tours'}     | ${'Tours'}
     ${'/Years'}     | ${'Years'}
-  `('should render $componentToRender component by current path correctly', ({ currentPath, componentToRender }) => {
-    wrapper.setProps({ currentPath });
-    expect(wrapper.find(componentToRender)).toHaveLength(1);
-  });
+  `(
+    'should render $componentToRender component by current path $currentPath correctly',
+    ({ currentPath, componentToRender }) => {
+      wrapper.setProps({ currentPath });
+      expect(wrapper.find(componentToRender)).toHaveLength(1);
+    }
+  );
 });
