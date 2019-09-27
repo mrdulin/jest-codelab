@@ -23,5 +23,6 @@ describe('Dashboard Page test cases', () => {
     const actualValue = await (wrapper.instance() as any).initializeCharts();
     expect(actualValue).toBeUndefined();
     expect(logSpy).toBeCalledWith(mockedResponse);
+    expect(getIntentsSince).toBeCalledWith('2019', '2019');
   });
 });
