@@ -3,8 +3,15 @@ jest.enableAutomock();
 import utils from './utils';
 
 describe('automatic mocks test suites', () => {
-  it('if utils are mocked', () => {
+  it('should mock all methods of utils', () => {
     expect((utils.getJSON as jest.Mock).mock).toBeTruthy();
+    expect(jest.isMockFunction(utils.authorize)).toBeTruthy();
+    expect(jest.isMockFunction(utils.isAuthorized)).toBeTruthy();
+  });
+
+  test('implementation created by automock', () => {
+    expect(utils.authorize()).toBeUndefined();
+    expect(utils.isAuthorized('wizard')).toBeUndefined();
   });
 
   it('mocked implementation', () => {
