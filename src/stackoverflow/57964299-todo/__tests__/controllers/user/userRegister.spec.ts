@@ -2,7 +2,7 @@ import { userRegister } from '../../../controllers/user';
 import { Request, Response, NextFunction } from 'express';
 import { mock } from '../../../../../__utils';
 
-describe('User Registration', () => {
+describe.skip('User Registration', () => {
   test('User has an invalid first name', async () => {
     const mockRequest: any = {
       body: {

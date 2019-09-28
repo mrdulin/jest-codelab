@@ -8,7 +8,7 @@ describe('async code test suites', () => {
     // 不要这样测试
     // 例如t-1, 测试用例it的函数在fetchData调用callback之前就完成了。所以callback不会被调用，callback中的expect也就不能按照期望那样执行。
 
-    it('t-1', () => {
+    it.skip('t-1', () => {
       expect.assertions(0);
 
       function callback(data) {
@@ -55,14 +55,12 @@ describe('async code test suites', () => {
     // 如果这个promise reject了，则该测试用例失败。
 
     // t-0这个测试用例是不正确的，没有返回promise, 这个测试用例会在异步方法(fetchData_v2)执行完毕之前执行完毕
-    // it('t-0', () => {
-
-    //   expect.assertions(1);
-    //   fetchDataV2().then(data => {
-    //     expect(data).toEqual({name: 'novaline', age: 26});
-    //   });
-
-    // });
+    it.skip('t-0', () => {
+      expect.assertions(1);
+      fetchDataV2(1).then(data => {
+        expect(data).toEqual({ name: 'novaline', age: 26 });
+      });
+    });
 
     // promise.then/promise.catch
     it('t-1 - promise.then', () => {

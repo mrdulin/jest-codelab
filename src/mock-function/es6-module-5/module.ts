@@ -1,4 +1,4 @@
-import { IObj } from '../../interfaces';
+import { IObj } from './interfaces';
 
 const obj: IObj = {
   getMessage() {
