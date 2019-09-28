@@ -1,4 +1,6 @@
-import utils from '../utils';
+jest.enableAutomock();
+
+import utils from './utils';
 
 describe('automatic mocks test suites', () => {
   it('if utils are mocked', () => {

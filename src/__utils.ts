@@ -25,3 +25,14 @@ export function mock<T>(...mockedMethods: Array<MethodsOf<T>>): jest.Mocked<T> {
   mockedMethods.forEach(mockedMethod => (partiallyMocked[mockedMethod] = jest.fn()));
   return partiallyMocked as jest.Mocked<T>;
 }
+
+export interface IMessage {
+  type: string;
+  body: any;
+}
+
+export interface IPubsubEvent {
+  data: {
+    data: IMessage;
+  };
+}
