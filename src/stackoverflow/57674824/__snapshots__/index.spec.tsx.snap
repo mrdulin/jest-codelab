@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SomeCompoennt should call reloadObjectDetails when objectId has changed 1`] = `
+<div>
+  123
+</div>
+`;
+
+exports[`SomeCompoennt should shallow render correctly 1`] = `
+<div>
+  12
+</div>
+`;

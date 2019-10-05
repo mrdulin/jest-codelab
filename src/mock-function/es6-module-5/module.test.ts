@@ -1,5 +1,5 @@
 import m from './module';
-import { IObj } from '../../interfaces';
+import { IObj } from './interfaces';
 
 // 通过定义一个对象，并将所有方法作为对象的属性，导出该对象的方式，jest可以成功mock该对象内的方法
 describe('mock function test suites', () => {

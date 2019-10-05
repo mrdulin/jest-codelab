@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header match snapshot 1`] = `
+<div>
+  Tue Dec 24 2019 00:00:00 GMT+0800
+</div>
+`;

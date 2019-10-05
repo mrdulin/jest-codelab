@@ -21,16 +21,16 @@ describe('jest', () => {
 
     it('Mocks a module with an auto-mocked version when it is being required. ', () => {
       // 显式mock了banana模块
-      jest.mock('../banana');
-      const banana = require('../banana');
+      jest.mock('./banana');
+      const banana = require('./banana');
 
       // 因为banana模块被mock了，而且jest.mock没有指定一个模块工厂函数去实现该banana模块的行为，所以调用banana时，返回undefined
       expect(banana()).toBeUndefined();
     });
 
-    // 在上一个单元测试里，使用jest.mock('../banana')， mock了banana模块，下面这个单元测试，用来测试banana模块require后，是否还是mock的模块
+    // 在上一个单元测试里，使用jest.mock('./banana')， mock了banana模块，下面这个单元测试，用来测试banana模块require后，是否还是mock的模块
     it('测试jest.mock的影响范围', () => {
-      const banana = require('../banana');
+      const banana = require('./banana');
       // 结论是，尽管jest.mock是在某一个单元测试的函数作用域中调用（如上面的单元测试），但因为jest对象在一个测试文件中是全局对象，
       // 因此jest.mock的模块，在整个文件中使用require加载后，都是加载的mock过的模块
       expect(banana()).toBeUndefined();
@@ -38,8 +38,8 @@ describe('jest', () => {
 
     it("The second argument can be used to specify an explicit module factory that is being run instead of using Jest's automocking feature:", () => {
       // 显式mock了apple模块，而且通过jest.mock的第二个参数指定了一个函数用来实现apple模块的行为
-      jest.mock('../apple', () => jest.fn(() => 'apple is good'));
-      const apple = require('../apple');
+      jest.mock('./apple', () => jest.fn(() => 'apple is good'));
+      const apple = require('./apple');
 
       expect(apple()).toBe('apple is good');
     });
@@ -65,7 +65,7 @@ describe('jest', () => {
     });
 
     it('apple module should be a mock function', () => {
-      const apple = require('../apple');
+      const apple = require('./apple');
       expect(jest.isMockFunction(apple)).toBeTruthy();
     });
 
@@ -80,7 +80,7 @@ describe('jest', () => {
     });
 
     it('grape module should not be a mock function', () => {
-      const grape = require('../grape');
+      const grape = require('./grape');
       expect(jest.isMockFunction(grape)).toBeFalsy();
     });
   });
@@ -133,22 +133,18 @@ describe('jest', () => {
   });
 
   describe('unmock', () => {
-    // jest.unmock这个方法之前的版本是jest.dontMock
-
     it('should be require the real grape module', () => {
-      const grape = require('../grape');
+      const grape = require('./grape');
       expect(grape()).toBe('grape');
     });
 
     it('should be get the real grape module', () => {
-      jest.mock('../grape', () => jest.fn(() => 'grape is good'));
-      const grapeMocked = require('../grape');
-
+      jest.doMock('./grape', () => jest.fn(() => 'grape is good'));
+      const grapeMocked = require('./grape');
       expect(grapeMocked()).toBe('grape is good');
 
-      jest.unmock('../grape');
-      const grapeUnmocked = require('../grape');
-
+      jest.dontMock('./grape');
+      const grapeUnmocked = require('./grape');
       expect(grapeUnmocked()).toBe('grape');
     });
   });

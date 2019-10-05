@@ -13,7 +13,7 @@ const { Pool } = require('pg');
 
 const pool = new Pool();
 
-describe('someModule', () => {
+describe.skip('someModule', () => {
   it('callback is called', done => {
     const text = 'QUERY TEXT';
     const params = { a: 1, b: 2 };

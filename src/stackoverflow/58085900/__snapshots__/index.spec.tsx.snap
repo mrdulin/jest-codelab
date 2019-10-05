@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SomeComponent #handleSubmit check submit 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <label>
+      firstName:
+      <input
+        name="firstName"
+        onChange={[Function]}
+        placeholder="enter your first name"
+        type="text"
+        value="Cel.du.on"
+      />
+    </label>
+    <label>
+      lastName:
+      <input
+        name="lastName"
+        onChange={[Function]}
+        placeholder="enter your last name"
+        type="text"
+        value="lin.on"
+      />
+    </label>
+    <div>
+      <input
+        type="submit"
+        value="Submit"
+      />
+    </div>
+  </form>
+</div>
+`;
+
+exports[`SomeComponent #handleSubmit should alert when first name is invalid 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <label>
+      firstName:
+      <input
+        name="firstName"
+        onChange={[Function]}
+        placeholder="enter your first name"
+        type="text"
+        value="du"
+      />
+    </label>
+    <label>
+      lastName:
+      <input
+        name="lastName"
+        onChange={[Function]}
+        placeholder="enter your last name"
+        type="text"
+        value="lin.on"
+      />
+    </label>
+    <div>
+      <input
+        type="submit"
+        value="Submit"
+      />
+    </div>
+  </form>
+</div>
+`;
+
+exports[`SomeComponent #handleSubmit should alert when last name is invalid 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <label>
+      firstName:
+      <input
+        name="firstName"
+        onChange={[Function]}
+        placeholder="enter your first name"
+        type="text"
+        value="Cel.du.on"
+      />
+    </label>
+    <label>
+      lastName:
+      <input
+        name="lastName"
+        onChange={[Function]}
+        placeholder="enter your last name"
+        type="text"
+        value="lin"
+      />
+    </label>
+    <div>
+      <input
+        type="submit"
+        value="Submit"
+      />
+    </div>
+  </form>
+</div>
+`;

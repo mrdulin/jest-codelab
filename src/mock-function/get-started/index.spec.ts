@@ -1,8 +1,3 @@
-// 模块导出使用export default ClassA, 导入使用import ClassA from '../classA'会报错\
-// https://github.com/kulshekhar/ts-jest/issues/120
-
-import { ClassA } from '../../classA';
-
 /**
  * mock functions
  *
