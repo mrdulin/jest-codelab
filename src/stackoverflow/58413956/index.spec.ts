@@ -8,6 +8,7 @@ jest.mock('./anotherFile.ts', () => ({
 describe('Testing myFunc', () => {
   it('Should call outsideFunc', () => {
     myFunc();
+    expect(jest.isMockFunction(outsideFunc)).toBeTruthy();
     expect(outsideFunc).toHaveBeenCalled();
   });
 });
