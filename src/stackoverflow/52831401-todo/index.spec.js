@@ -1,40 +1,26 @@
-jest.mock('pg', () => {
-  return {
-    Pool: jest.fn(() => {
-      return {
-        query: jest.fn()
-      };
-    })
-  };
-});
-
 const someModule = require('./index');
-const { Pool } = require('pg');
 
-const pool = new Pool();
+jest.mock('pg');
 
-describe.skip('someModule', () => {
-  it('callback is called', done => {
+describe('someModule', () => {
+  beforeEach(() => {
+    jest.restoreAllMocks();
+  });
+  it('callback is called', async () => {
     const text = 'QUERY TEXT';
     const params = { a: 1, b: 2 };
-    // expect.assertions(2);
-    const queryCallback = jest.fn((err, res) => {
-      cb(err, res);
-    });
-    pool.query.mockImplementation((a, b, callback = queryCallback) => {
-      const error = null;
-      const res = {};
-      callback(error, res);
-    });
-
-    const cb = jest.fn((err, res) => {
-      console.log(err, res);
-      expect(err).toEqual(null);
-      expect(res).toEqual({});
-      done();
-    });
-
-    someModule.query(text, params, cb);
-    expect(pool.query).toBeCalledWith(text, params);
+    const callback = jest.fn();
+    const mRes = { rows: [1], rowCount: 1 };
+    const DateNowSpy = jest
+      .spyOn(Date, 'now')
+      .mockReturnValueOnce(100)
+      .mockReturnValueOnce(200);
+    const pquerySpy = jest.spyOn(someModule, 'pquery').mockResolvedValueOnce(mRes);
+    const logSpy = jest.spyOn(console, 'log');
+    await someModule.query(text, params, callback);
+    expect(callback).toBeCalledWith(undefined, mRes);
+    expect(pquerySpy).toBeCalledWith(text, params);
+    expect(logSpy).toBeCalledWith('executed query', { text, duration: 100, rows: mRes.rowCount });
+    expect(DateNowSpy).toBeCalledTimes(2);
   });
 });
