@@ -8,8 +8,12 @@ export class Sample {
   }
   private arguments!: TestCaseArgumentsType;
   sampleTestFunction() {
+    console.log('===execute 2===');
+    console.log(this.arguments.url); // **expected**: sampleUrl **actual**: cannot set property url of undefined
+
     it('to check the before each execution effects in the test case', () => {
-      console.log(this.arguments.url); // **expected**: sampleUrl **actual**: cannot set property url of undefined
+      console.log('===execute 4===');
+      console.log(this.arguments.url); // sampleUrl
     });
   }
 }
