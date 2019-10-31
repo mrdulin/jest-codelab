@@ -1,5 +1,5 @@
 import React from 'react';
-import SampleComponent from './';
+import SampleComponent from '.';
 import ReactDOM from 'react-dom';
 import { unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';

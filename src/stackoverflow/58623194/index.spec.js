@@ -22,4 +22,11 @@ describe('lambdaService', () => {
     expect(actualValue).toEqual({ statusCode: 500, body: JSON.stringify({ message: mResponse.message }) });
     expect(retrieveDataSpy).toBeCalledWith(mEvent.id);
   });
+
+  test('should throw an error', async () => {
+    const mEvent = { id: 1 };
+    const retrieveDataSpy = jest.spyOn(dataService, 'retrieveData').mockRejectedValueOnce(new Error('network error'));
+    await expect(lambdaService(mEvent)).rejects.toThrowError(new Error('network error'));
+    expect(retrieveDataSpy).toBeCalledWith(mEvent.id);
+  });
 });
