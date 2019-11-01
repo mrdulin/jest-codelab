@@ -74,6 +74,7 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
+    "@material-ui/core": "^4.5.2",
     "@react-native-community/netinfo": "^4.4.0",
     "@sendgrid/mail": "^6.4.0",
     "aws-sdk": "^2.558.0",
