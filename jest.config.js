@@ -7,5 +7,6 @@ module.exports = {
   testEnvironmentOptions: {
     enzymeAdapter: 'react16'
   },
-  coverageReporters: ['json', 'text', 'lcov', 'clover']
+  coverageReporters: ['json', 'text', 'lcov', 'clover'],
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)']
 };
