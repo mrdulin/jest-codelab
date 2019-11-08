@@ -6,7 +6,7 @@ describe('git', () => {
     afterEach(() => {
       jest.restoreAllMocks();
     });
-    it('should fail if the deployment folder begins with /', async () => {
+    it('t-1', async () => {
       const mConstants = {
         build: '/',
         action: {
@@ -23,7 +23,7 @@ describe('git', () => {
       expect(spy).toBeCalledTimes(1);
     });
 
-    it('should fail if the deployment folder begins with /', async () => {
+    it('t-2', async () => {
       const mConstants = {
         build: 'build',
         action: {
