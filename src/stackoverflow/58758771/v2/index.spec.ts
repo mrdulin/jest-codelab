@@ -45,28 +45,3 @@ describe('git', () => {
     });
   });
 });
-
-jest.mock('../src/constants', () => ({
-  build: 'dist',
-  action: {
-    pusher: {
-      name: 'montezuma',
-      email: 'best@cat'
-    },
-    gitHubToken: 'exists'
-  }
-}));
-
-describe('git', () => {
-  describe('init', () => {
-    it('should execute three commands', async () => {
-      await init();
-
-      expect(execute).toBeCalledTimes(3);
-    });
-
-    it('should fail if the deployment folder begins with /', async () => {
-      // I want the values of constants to be different in here.
-    });
-  });
-});

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccountCheckModule should render correct 1`] = `
+<div>
+  <div>
+    666
+  </div>
+</div>
+`;
