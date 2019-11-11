@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`myComponent should renders correctly 1`] = `
+<div>
+  rows count: 
+  3
+</div>
+`;
