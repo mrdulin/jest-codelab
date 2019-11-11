@@ -5,7 +5,7 @@ jest.mock('./auth.js', () => {
 });
 
 const utils = require('./utils');
-const { auth } = require('./auth.js');
+const { auth } = require('./auth.js.js');
 
 describe('utils', () => {
   describe('#checkIfTokenIsValid', () => {

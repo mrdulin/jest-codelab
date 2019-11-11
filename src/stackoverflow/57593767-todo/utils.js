@@ -1,4 +1,4 @@
-const { auth } = require('./auth.js');
+const { auth } = require('./auth.js.js');
 
 let authToken = undefined;
 
