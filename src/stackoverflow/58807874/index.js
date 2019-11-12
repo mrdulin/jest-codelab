@@ -7,7 +7,7 @@ const fetchData = async (product, numOfProducts) => {
 // user input for products looks like 'butter 2'
 // selecting Breaskstone's butter (from mockData below)
 export const addToShoppingList = async (product, numOfProducts = 10, getProducts = fetchData) => {
-  const shoppingList: any[] = [];
+  const shoppingList = [];
 
   const item = product.slice(0, -2); // i.g. 'butter'
   const i = +product.split(' ').pop() - 1; // i.g. '2' which becomes 1, the index number in array

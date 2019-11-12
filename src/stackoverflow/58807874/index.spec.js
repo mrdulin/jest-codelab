@@ -1,4 +1,4 @@
-import { addToShoppingList } from './';
+import { addToShoppingList } from '.';
 
 const mockData = {
   items: [
