@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component should handle change event 1`] = `
+<Component>
+  <View>
+    <div>
+      <CustomComponent
+        onChange={[Function]}
+      >
+        <input
+          onChange={[Function]}
+        />
+      </CustomComponent>
+    </div>
+  </View>
+</Component>
+`;
