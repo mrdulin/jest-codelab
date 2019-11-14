@@ -2,6 +2,8 @@
 
 [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
 [![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/mrdulin/jest-codelab)
+[![Build Status](https://travis-ci.org/mrdulin/jest-codelab.svg?branch=master)](https://travis-ci.org/mrdulin/jest-codelab)
+[![Coverage Status](https://coveralls.io/repos/github/mrdulin/jest-codelab/badge.svg?branch=master)](https://coveralls.io/github/mrdulin/jest-codelab?branch=master)
 
 Learning JavaScript Unit Test Framework - Jestjs by examples
 
