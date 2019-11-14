@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from './';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import * as requestService from './requestService';
 
 jest.mock('./requestService.ts', () => {
@@ -21,8 +21,8 @@ describe('Header', () => {
     );
     const wrapper = shallow(<Header></Header>);
     setImmediate(() => {
-      expect(wrapper.state()).toEqual({ startDate: new Date(mockedData.data.runningSince).toString() });
-      expect(wrapper.text()).toEqual(new Date(mockedData.data.runningSince).toString());
+      expect(wrapper.state()).toEqual({ startDate: mockedData.data.runningSince });
+      expect(wrapper.text()).toEqual(mockedData.data.runningSince);
       expect(wrapper).toMatchSnapshot();
       done();
     });

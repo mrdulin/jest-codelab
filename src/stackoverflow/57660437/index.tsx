@@ -17,7 +17,7 @@ export class Header extends React.Component<{}, IHeaderState> {
     try {
       const response = await runningSince();
       const dtInicializacao = new Date(response.data.runningSince);
-      this.setState(() => ({ startDate: dtInicializacao.toString() }));
+      this.setState(() => ({ startDate: dtInicializacao.toISOString() }));
     } catch (error) {
       console.log(error);
       this.setState(() => ({ startDate: 'Offline' }));

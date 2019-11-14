@@ -6,8 +6,8 @@ export class Header extends React.Component {
     const date = moment()
       .month(10)
       .date(24)
-      .toISOString();
+      .utc();
 
-    return <div>{date}</div>;
+    return <div>{date.toISOString()}</div>;
   }
 }
