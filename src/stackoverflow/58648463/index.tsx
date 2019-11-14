@@ -9,13 +9,13 @@ class MFASection extends Component<any, any> {
     };
   }
   componentDidMount() {
-    return svc.getMe().then(res => {
+    svc.getMe().then(res => {
       console.log(res);
       this.setState({ enabledMFA: res.data.mfa_enabled });
     });
   }
   render() {
-    return <div>enabledMFA: {this.state.enabledMFA}</div>;
+    return <div>enabledMFA: {this.state.enabledMFA ? '1' : '2'}</div>;
   }
 }
 
