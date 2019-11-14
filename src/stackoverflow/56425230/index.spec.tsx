@@ -4,9 +4,9 @@ import { Header } from './';
 
 describe('Header', () => {
   it('match snapshot', () => {
-    jest.spyOn(Date, 'now').mockReturnValueOnce(new Date('2019/11/24').getTime());
+    jest.spyOn(Date, 'now').mockReturnValueOnce(new Date('2019-11-24T00:00:00Z').getTime());
     const wrapper: ShallowWrapper = shallow(<Header></Header>);
-    expect(wrapper.text()).toBe(new Date('2019/11/24').toISOString());
+    expect(wrapper.text()).toBe(new Date('2019-11-24T00:00:00Z').toISOString());
     expect(wrapper).toMatchSnapshot();
   });
 });
