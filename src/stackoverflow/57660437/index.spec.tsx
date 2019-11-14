@@ -13,7 +13,7 @@ describe('Header', () => {
   it('t1', done => {
     const mockedData = {
       data: {
-        runningSince: '2019-08-26T11:55:03.696Z'
+        runningSince: new Date('2019-08-26T11:55:03.696Z').toISOString()
       }
     };
     (requestService.runningSince as jest.MockedFunction<typeof requestService.runningSince>).mockResolvedValueOnce(

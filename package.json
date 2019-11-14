@@ -8,7 +8,7 @@
     "test:w": "jest --watch",
     "test:coverage": "npm t --coverage",
     "yarn:import": "rm -rf ./yarn.lock && yarn import",
-    "coverall": "npm run test:coverage -- --coverageReporters=text-lcov --colors | coveralls"
+    "coverall": "npm t -- --coverage --coverageReporters=text-lcov --colors | coveralls"
   },
   "repository": {
     "type": "git",
