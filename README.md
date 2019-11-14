@@ -3,12 +3,27 @@
 [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
 [![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/mrdulin/jest-codelab)
 
-Learning javascript unit test framework - Jest by examples
+Learning JavaScript Unit Test Framework - Jestjs by examples
 
-## TODO
+## Test
 
-- [ ] https://stackoverflow.com/questions/50085505/testing-typescript-code-with-namespaces-by-jest-ts-jest
-- [ ] https://stackoverflow.com/questions/45175599/mock-a-namespace-and-a-function-with-same-name-using-jest
+Run test for single file:
+
+```bash
+npm t -- /Users/ldu020/workspace/github.com/mrdulin/jest-codelab/src/stackoverflow/58820204/index.spec.jsx
+```
+
+Run test for single file with coverage report:
+
+```bash
+npm t -- --coverage /Users/ldu020/workspace/github.com/mrdulin/jest-codelab/src/stackoverflow/58820204/index.spec.jsx
+```
+
+Run test for all files:
+
+```bash
+npm test
+```
 
 ---
 

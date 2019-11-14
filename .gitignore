@@ -8,3 +8,4 @@ yarn-error.log*
 
 .idea
 .DS_STORE
+.tmp

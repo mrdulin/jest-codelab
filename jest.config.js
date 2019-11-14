@@ -8,5 +8,6 @@ module.exports = {
     enzymeAdapter: 'react16'
   },
   coverageReporters: ['json', 'text', 'lcov', 'clover'],
-  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)']
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  modulePathIgnorePatterns: ['<rootDir>/src/import-undefined-issue']
 };

@@ -4,9 +4,9 @@
   "description": "Learning javascript unit test framework - Jest by examples",
   "main": "",
   "scripts": {
-    "test": "jest --detectOpenHandles",
+    "test": "jest --detectOpenHandles --verbose",
     "test:w": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "test:coverage": "npm t --coverage",
     "yarn:import": "rm -rf ./yarn.lock && yarn import"
   },
   "repository": {

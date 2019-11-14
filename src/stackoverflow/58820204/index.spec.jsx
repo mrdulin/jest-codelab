@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import AutoComplete from './index';
 
 describe('AutoComplete', () => {
+  beforeEach(() => {
+    jest.resetAllMocks();
+    jest.restoreAllMocks();
+  });
   it('render list', () => {
     const handleClick = jest.fn();
     const mockList = [

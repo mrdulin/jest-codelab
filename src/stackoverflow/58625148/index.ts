@@ -7,6 +7,6 @@ export default async function generateFile(value): Promise<void> {
 
 async function writeSampleFile(value: string): Promise<void> {
   try {
-    await writeFile(pathResolve('some path'), value, 'utf8');
+    await writeFile(pathResolve(__dirname, './.tmp/somePath'), value, 'utf8');
   } catch (err) {}
 }
