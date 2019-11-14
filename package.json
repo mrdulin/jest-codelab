@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --detectOpenHandles",
     "test:w": "jest --watch",
-    "coverage": "jest --coverage",
+    "test:coverage": "jest --coverage",
     "yarn:import": "rm -rf ./yarn.lock && yarn import"
   },
   "repository": {

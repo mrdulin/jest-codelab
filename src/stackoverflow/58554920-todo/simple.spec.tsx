@@ -10,7 +10,7 @@ const mockStore = configureMockStore([thunk]);
 const store = mockStore();
 const FirebaseAuthProps = {};
 
-describe('<simple />', () => {
+describe.skip('<simple />', () => {
   test('simulate click button', () => {
     const GoogleAuthProviderSpy = jest.fn().mockReturnValueOnce({});
     const signInWithRedirectSpy = jest.fn();
