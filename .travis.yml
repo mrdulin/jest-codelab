@@ -1,12 +1,12 @@
 language: node_js
 node_js:
-  - '10.16.0'
+  - "10.16.0"
 install:
   - npm install
 jobs:
   include:
-    - stage: 'TEST'
-      name: 'unit tests with coverage'
+    - stage: "test"
+      name: "unit tests with coverage"
       script: npm run coverall
 stages:
   - test
