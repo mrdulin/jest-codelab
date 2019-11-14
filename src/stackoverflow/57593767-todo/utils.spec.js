@@ -1,11 +1,11 @@
-jest.mock('./auth.js', () => {
+const utils = require('./utils');
+const auth = require('./auth.js');
+
+jest.mock('./auth', () => {
   return {
     auth: jest.fn()
   };
 });
-
-const utils = require('./utils');
-const { auth } = require('./auth.js');
 
 describe.skip('utils', () => {
   describe('#checkIfTokenIsValid', () => {
@@ -21,13 +21,13 @@ describe.skip('utils', () => {
     test('should not check token', async () => {
       utils.authToken = undefined;
       await utils.checkIfTokenIsValid();
-      expect(auth).not.toBeCalled();
+      expect(auth.auth).not.toBeCalled();
     });
 
     test('should check token', async () => {
       utils.authToken = 123;
       await utils.checkIfTokenIsValid();
-      expect(auth).toBeCalledTimes(1);
+      expect(auth.auth).toBeCalledTimes(1);
     });
   });
 });

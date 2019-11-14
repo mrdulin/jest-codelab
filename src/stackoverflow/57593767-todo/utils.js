@@ -1,11 +1,11 @@
-const { auth } = require('./auth.js.js');
+const auth = require('./auth.js');
 
 let authToken = undefined;
 
 const checkIfTokenIsValid = async () => {
   console.log(authToken);
   if (authToken) {
-    authToken = await auth();
+    authToken = await auth.auth();
   }
 };
 
