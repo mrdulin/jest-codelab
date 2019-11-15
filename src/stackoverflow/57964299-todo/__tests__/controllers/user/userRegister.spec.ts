@@ -1,10 +1,9 @@
 import { userRegister } from '../../../controllers/user';
-import { Request, Response, NextFunction } from 'express';
-import { mock } from '../../../../../__utils';
+import { NextFunction, Request } from 'express';
 
 describe.skip('User Registration', () => {
   test('User has an invalid first name', async () => {
-    const mockRequest: any = {
+    const mockRequest: Request = {
       body: {
         firstName: 'J',
         lastName: 'Doe',

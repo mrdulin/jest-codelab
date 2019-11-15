@@ -1,1 +1,3 @@
-export function userRegister(req, res, next) {}
+import { NextFunction, Request, Response } from 'express';
+
+export function userRegister(req: Request, res: Response, next: NextFunction) {}
