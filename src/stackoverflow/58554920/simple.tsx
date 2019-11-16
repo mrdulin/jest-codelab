@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as firebase from 'firebase';
+import firebase from 'firebase';
 import { withRouter } from 'react-router-dom';
 
 class simple extends Component {
