@@ -1,3 +1,9 @@
-import { NextFunction, Request, Response } from 'express';
+import { NextFunction, Request, Response } from "express";
 
-export function userRegister(req: Request, res: Response, next: NextFunction) {}
+export async function userRegister(
+  req: Request,
+  res: Response,
+  next: NextFunction
+) {
+  //
+}
