@@ -27,6 +27,7 @@ describe("SomeClass", () => {
     eventHandler["open"]();
     const actual = await pending;
     expect(actual).toBeUndefined();
+    expect(ws.on).toBeCalledWith("open", eventHandler["open"]);
   });
 
   it("should fail", async () => {
@@ -38,5 +39,6 @@ describe("SomeClass", () => {
     const mError = new Error("connection error");
     eventHandler["error"](mError);
     await expect(pending).rejects.toThrowError(mError);
+    expect(ws.on).toBeCalledWith("error", eventHandler["error"]);
   });
 });
