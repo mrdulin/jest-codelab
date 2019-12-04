@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderProgress should passs 1`] = `
+<OrderProgress
+  orderData={
+    Object {
+      "price": 1000,
+    }
+  }
+>
+  <div
+    className="progressCard"
+  >
+    <div
+      className="progressBar"
+      style={
+        Object {
+          "maxWidth": "99%",
+          "width": "10%",
+        }
+      }
+    />
+    <div
+      className="liveData"
+    >
+      <span
+        className="label"
+      >
+        LIVE
+      </span>
+      <span
+        className="value"
+      >
+        100
+      </span>
+    </div>
+    <div
+      className="progressDetail"
+    >
+      : Awaiting Execution…
+    </div>
+    <div
+      className="targetData"
+    >
+      <span
+        className="label"
+      >
+        Target
+      </span>
+      <span
+        className="value"
+      >
+        1000
+      </span>
+    </div>
+  </div>
+</OrderProgress>
+`;
+
+exports[`OrderProgress should passs 2`] = `
+<OrderProgress
+  orderData={
+    Object {
+      "price": 1000,
+    }
+  }
+>
+  <div
+    className="progressCard"
+  >
+    <div
+      className="progressBar"
+      style={
+        Object {
+          "maxWidth": "99%",
+          "width": "20%",
+        }
+      }
+    />
+    <div
+      className="liveData"
+    >
+      <span
+        className="label"
+      >
+        LIVE
+      </span>
+      <span
+        className="value"
+      >
+        200
+      </span>
+    </div>
+    <div
+      className="progressDetail"
+    >
+      : Awaiting Execution…
+    </div>
+    <div
+      className="targetData"
+    >
+      <span
+        className="label"
+      >
+        Target
+      </span>
+      <span
+        className="value"
+      >
+        1000
+      </span>
+    </div>
+  </div>
+</OrderProgress>
+`;
