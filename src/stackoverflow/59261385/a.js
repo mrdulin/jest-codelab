@@ -2,7 +2,6 @@ const request = require('request-promise');
 
 module.exports = async () => {
   var options = {
-    method: 'POST',
     uri: 'fsdsfd',
     headers: {
       'content-type': 'application/json',
@@ -15,7 +14,7 @@ module.exports = async () => {
   };
 
   try {
-    const selectResult = await request(options);
+    const selectResult = await request.post(options);
     return selectResult;
   } catch (err) {
     return err;
