@@ -106,6 +106,7 @@
     "moment-timezone": "^0.5.27",
     "mongoose": "^5.7.7",
     "node-fetch": "^2.6.0",
+    "pdfmake": "^0.1.62",
     "pg": "^7.12.1",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
