@@ -1,4 +1,4 @@
-import request from './request';
+import request from './myRequest';
 import User from './user.model';
 import { IUser } from './interfaces/user';
 
@@ -7,9 +7,9 @@ async function getUserById(userId: number): Promise<User> {
     .then(
       (user: IUser): User => {
         return new User(user);
-      }
+      },
     )
-    .catch(error => {
+    .catch((error) => {
       console.error(error);
       return Promise.reject(error);
     });
