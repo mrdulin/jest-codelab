@@ -9,7 +9,7 @@ jest.mock('request-promise', () => {
 
 describe('59261385', () => {
   afterEach(() => {
-    jest.restoreAllMocks();
+    jest.resetAllMocks();
   });
   test('Update function', async () => {
     request.post.mockResolvedValueOnce({ result: [] });
