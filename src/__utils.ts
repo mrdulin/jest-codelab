@@ -22,7 +22,7 @@ type PartiallyMockedInterfaceOf<T> = {
 
 export function mock<T>(...mockedMethods: Array<MethodsOf<T>>): jest.Mocked<T> {
   const partiallyMocked: PartiallyMockedInterfaceOf<T> = {};
-  mockedMethods.forEach(mockedMethod => (partiallyMocked[mockedMethod] = jest.fn()));
+  mockedMethods.forEach((mockedMethod) => (partiallyMocked[mockedMethod] = jest.fn()));
   return partiallyMocked as jest.Mocked<T>;
 }
 
