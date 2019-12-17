@@ -19,5 +19,6 @@ describe('MyComponent', () => {
       await new Promise((resolve) => setTimeout(resolve, 0));
     });
     expect(wrapper.text()).toBe('country: US, cntCode: 123');
+    expect((global as any).fetch).toBeCalledWith('http://ip-api.com/json');
   });
 });
