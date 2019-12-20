@@ -1,4 +1,4 @@
-jest.mock('../request');
+jest.mock('../myRequest');
 
 import * as userService from '../user.service';
 import User from '../user.model';
