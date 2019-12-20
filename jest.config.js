@@ -5,9 +5,18 @@ module.exports = {
   // setupFiles: ['/Users/ldu020/workspace/github.com/mrdulin/jest-codelab/src/stackoverflow/58585527/window.setup.js'],
   setupFilesAfterEnv: ['jest-enzyme'],
   testEnvironmentOptions: {
-    enzymeAdapter: 'react16'
+    enzymeAdapter: 'react16',
   },
   coverageReporters: ['json', 'text', 'lcov', 'clover'],
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
-  modulePathIgnorePatterns: ['<rootDir>/src/import-undefined-issue']
+  modulePathIgnorePatterns: ['<rootDir>/src/import-undefined-issue'],
 };
+
+// module.exports = {
+//   preset: 'ts-jest/presets/js-with-ts',
+//   testEnvironment: 'node',
+//   globals: {
+//     window: {},
+//     document: {},
+//   },
+// };
