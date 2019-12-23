@@ -14,9 +14,9 @@ module.exports = {
 
 // module.exports = {
 //   preset: 'ts-jest/presets/js-with-ts',
-//   testEnvironment: 'node',
-//   globals: {
-//     window: {},
-//     document: {},
-//   },
+//   // testEnvironment: 'node',
+//   // globals: {
+//   //   window: {},
+//   //   document: {},
+//   // },
 // };
