@@ -1,5 +1,6 @@
 module.exports = {
-  preset: 'ts-jest/presets/js-with-ts',
+  presets: 'ts-jest/presets/js-with-ts',
+
   // testEnvironment: 'node',
   testEnvironment: 'enzyme',
   // setupFiles: ['/Users/ldu020/workspace/github.com/mrdulin/jest-codelab/src/stackoverflow/58585527/window.setup.js'],
