@@ -11,29 +11,19 @@ describe('59675724', () => {
     jest.restoreAllMocks();
   });
 
-  it('should print true', () => {
-    const logSpy = jest.spyOn(console, 'log');
+  it('should enabled animation', () => {
     const mEvent = {
-      target: {
-        scrollWidth: 100,
-        scrollLeft: 50,
-        clientWidth: 50,
-      },
+      target: { scrollWidth: 100, scrollLeft: 50, clientWidth: 50 },
     };
     wrapper.find('.story-card-list').simulate('scroll', mEvent);
-    expect(logSpy).toBeCalledWith(true);
+    expect(wrapper.find('.story-card-list').text()).toEqual('story card list, animate: animation enabled');
   });
 
-  it('should print false', () => {
-    const logSpy = jest.spyOn(console, 'log');
+  it('should disabled animation', () => {
     const mEvent = {
-      target: {
-        scrollWidth: 100,
-        scrollLeft: 50,
-        clientWidth: 100,
-      },
+      target: { scrollWidth: 100, scrollLeft: 50, clientWidth: 100 },
     };
     wrapper.find('.story-card-list').simulate('scroll', mEvent);
-    expect(logSpy).toBeCalledWith(false);
+    expect(wrapper.find('.story-card-list').text()).toEqual('story card list, animate: animation disabled');
   });
 });

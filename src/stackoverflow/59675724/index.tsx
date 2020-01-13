@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export const StoryCardList = () => {
+  const [animate, setAnimation] = useState(false);
+
   const handleScroll = (e) => {
     const { scrollWidth, scrollLeft, clientWidth } = e.target;
     const rightEnd = scrollWidth - scrollLeft === clientWidth;
 
     if (rightEnd) {
-      console.log(true);
+      setAnimation(true);
     } else {
-      console.log(false);
+      setAnimation(false);
     }
   };
 
   return (
     <div className="story-card-list" onScroll={(e) => handleScroll(e)}>
-      story card list
+      story card list, animate: {animate ? 'animation enabled' : 'animation disabled'}
     </div>
   );
 };
