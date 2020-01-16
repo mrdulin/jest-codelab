@@ -22,6 +22,6 @@ describe('59770174', () => {
       expect(callCount).toBe(lastCount);
       expect(action).toBeCalledTimes(1);
       done();
-    }, 64);
+    }, 2000);
   });
 });

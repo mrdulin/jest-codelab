@@ -2,7 +2,7 @@ import throttle from 'lodash/throttle';
 import React from 'react';
 
 export function Button({ action }) {
-  const throttledEvent = throttle(action, 32, { leading: true, trailing: false });
+  const throttledEvent = throttle(action, 1000, { leading: true, trailing: false });
 
   function handlePress() {
     console.count('handlePress');
