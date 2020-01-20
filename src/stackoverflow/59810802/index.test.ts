@@ -29,6 +29,7 @@ describe('59810802', () => {
     const actual = await thishandler(mEvent);
     expect(actual).toEqual(mockedResponseData);
     expect(sns.publish).toBeCalledWith({ Message: JSON.stringify({}), TopicArn: 'OUR-SNS-TOPIC' });
+    expect(sns.publish().promise).toBeCalledTimes(1);
     process.env.THIS_TOPIC_ARN = THIS_TOPIC_ARN;
   });
 });
