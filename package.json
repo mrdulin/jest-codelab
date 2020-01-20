@@ -134,6 +134,7 @@
     "request-promise": "^4.2.5",
     "request-promise-native": "^1.0.7",
     "rxjs": "^6.5.3",
+    "sequelize": "^5.21.3",
     "socket.io": "^2.3.0",
     "universal-cookie": "^4.0.2",
     "winston": "^3.2.1"
