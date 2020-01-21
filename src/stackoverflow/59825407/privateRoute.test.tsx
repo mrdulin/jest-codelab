@@ -1,7 +1,7 @@
 import React from 'react';
 import { PrivateRoute } from './privateRoute';
-import { mount, shallow } from 'enzyme';
-import { MemoryRouter, Redirect, Router } from 'react-router';
+import { mount } from 'enzyme';
+import { MemoryRouter } from 'react-router';
 import { authenticationService } from './authenticationService';
 
 describe('59825407', () => {
