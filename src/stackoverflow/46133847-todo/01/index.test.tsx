@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import LocationFinderSearch from '.';
+import LocationFinderSearch from './';
 
 describe.skip('<LocationFinderSearch />', () => {
   it('should render', () => {

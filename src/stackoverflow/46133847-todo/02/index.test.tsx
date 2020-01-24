@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Comp from '.';
+import Comp from './';
 
 describe.skip('Comp', () => {
   it('should render', () => {
