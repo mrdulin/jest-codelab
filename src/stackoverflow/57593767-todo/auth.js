@@ -1,5 +1,4 @@
-module.exports = {
-  async auth() {
-    return 'real auth response';
-  }
-};
+async function auth() {
+  return 'real auth response';
+}
+module.exports = { auth };

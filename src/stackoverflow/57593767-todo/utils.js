@@ -1,15 +1,13 @@
-const auth = require('./auth.js');
+let { auth } = require('./auth');
 
 let authToken = undefined;
 
 const checkIfTokenIsValid = async () => {
-  console.log(authToken);
   if (authToken) {
-    authToken = await auth.auth();
+    authToken = await auth();
   }
 };
 
 module.exports = {
   checkIfTokenIsValid,
-  authToken
 };

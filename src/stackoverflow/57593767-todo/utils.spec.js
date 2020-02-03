@@ -1,33 +1,27 @@
-const utils = require('./utils');
-const auth = require('./auth.js');
+const rewire = require('rewire');
+const utils = rewire('./utils');
 
-jest.mock('./auth', () => {
-  return {
-    auth: jest.fn()
-  };
-});
-
-describe.skip('utils', () => {
+describe('utils', () => {
   describe('#checkIfTokenIsValid', () => {
-    const originalAuthToken = utils.authToken;
-    afterAll(() => {
-      utils.authToken = originalAuthToken;
-    });
-
-    afterEach(() => {
-      jest.resetAllMocks();
-    });
-
     test('should not check token', async () => {
-      utils.authToken = undefined;
+      const authMock = jest.fn();
+      utils.__set__({
+        auth: authMock,
+        authToken: undefined,
+      });
       await utils.checkIfTokenIsValid();
-      expect(auth.auth).not.toBeCalled();
+      expect(authMock).not.toBeCalled();
     });
 
     test('should check token', async () => {
-      utils.authToken = 123;
+      const authMock = jest.fn().mockResolvedValueOnce('abc');
+      utils.__set__({
+        auth: authMock,
+        authToken: 123,
+      });
       await utils.checkIfTokenIsValid();
-      expect(auth.auth).toBeCalledTimes(1);
+      expect(authMock).toBeCalledTimes(1);
+      expect(utils.__get__('authToken')).toBe('abc');
     });
   });
 });
