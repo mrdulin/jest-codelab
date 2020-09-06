@@ -13,7 +13,7 @@ describe('63748243', () => {
       }
     }) as typeof fs.readFile);
     const actual = await getFile('/fake/path');
-    expect(actual.toString()).toEqual('123');
+    expect(actual).toEqual('123');
     expect(readFileSpy).toBeCalledWith('/fake/path', 'utf8', expect.any(Function));
     readFileSpy.mockRestore();
   });
