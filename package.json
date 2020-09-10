@@ -107,6 +107,7 @@
     "cors": "^2.8.5",
     "csvtojson": "^1.1.12",
     "date-fns": "^2.8.1",
+    "detect-node": "^2.0.4",
     "express": "^4.17.1",
     "express-xml-bodyparser": "^0.3.0",
     "firebase": "^7.2.2",
