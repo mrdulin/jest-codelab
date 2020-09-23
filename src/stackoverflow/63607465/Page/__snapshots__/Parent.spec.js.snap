@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Parent/> render renders 1`] = `
+<Parent
+  props={Object {}}
+>
+  <mockConstructor>
+    <div>
+      mocked child
+    </div>
+  </mockConstructor>
+</Parent>
+`;
