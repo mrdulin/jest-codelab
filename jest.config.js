@@ -3,7 +3,10 @@ module.exports = {
 
   // testEnvironment: 'node',
   testEnvironment: 'enzyme',
-  // setupFiles: ['/Users/ldu020/workspace/github.com/mrdulin/jest-codelab/src/stackoverflow/58585527/window.setup.js'],
+  setupFiles: [
+    // '/Users/ldu020/workspace/github.com/mrdulin/jest-codelab/src/stackoverflow/58585527/window.setup.js'
+    '/Users/ldu020/workspace/github.com/mrdulin/jest-codelab/src/stackoverflow/45702292/chai.setup.js'
+  ],
   setupFilesAfterEnv: ['jest-enzyme'],
   testEnvironmentOptions: {
     enzymeAdapter: 'react16',
