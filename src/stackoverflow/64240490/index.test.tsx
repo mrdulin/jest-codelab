@@ -13,14 +13,3 @@ describe('64240490', () => {
     expect(wrapper.find('.foo').filter('button')).toHaveLength(1);
   });
 });
-
-const wrapper = shallow(
-  <div>
-    <button>xx</button>
-  </div>,
-);
-
-console.log(wrapper.html()); //  <div><button>xx</button></div>
-
-console.log(wrapper.contains('button')); // false
-console.log(wrapper.filter('button')); // false
