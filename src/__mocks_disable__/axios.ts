@@ -1,4 +1,4 @@
 const axiosMocked = {
-  get: jest.fn()
+  get: jest.fn(),
 };
 export default axiosMocked;
