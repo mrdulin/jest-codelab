@@ -4,7 +4,7 @@
   "description": "Learning javascript unit test framework - Jest by examples",
   "main": "",
   "scripts": {
-    "test": "jest --detectOpenHandles --verbose",
+    "test": "jest --detectOpenHandles",
     "test:rewire": "ts-node -O '{\"module\":\"commonjs\"}' node_modules/jest/bin/jest.js",
     "test:w": "jest --watch",
     "test:coverage": "npm t --coverage",
@@ -154,6 +154,7 @@
     "sequelize": "^5.21.3",
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.0",
+    "styled-components": "^5.2.1",
     "universal-cookie": "^4.0.2",
     "winston": "^3.2.1"
   }
