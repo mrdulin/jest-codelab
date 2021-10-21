@@ -17,7 +17,7 @@ describe('api', () => {
     ]);
   });
 
-  test('should handle error', async () => {
+  test.skip('should handle error', async () => {
     const mData = { product_id: 1, status: 'no store' };
     const mError = new Error('connection error');
     const querySpy = jest.spyOn(db, 'query').mockRejectedValueOnce(mError);

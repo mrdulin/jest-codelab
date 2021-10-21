@@ -5,7 +5,7 @@ import configureMockStore from 'redux-mock-store';
 const mockStore = configureMockStore();
 
 describe('59799196', () => {
-  it('test input onChange function', () => {
+  it.skip('test input onChange function', () => {
     const store = mockStore({});
     const wrapper = shallow(<Login store={store} />).dive();
     wrapper
