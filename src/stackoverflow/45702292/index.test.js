@@ -1,5 +1,5 @@
 describe('45702292', () => {
-  it('should pass', () => {
+  it.skip('should pass', () => {
     chai.expect(1+1).to.be.eq(2)
   });
 });

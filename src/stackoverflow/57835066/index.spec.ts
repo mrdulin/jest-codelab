@@ -2,7 +2,7 @@ import axios from 'axios';
 import { main } from './';
 
 describe('main', () => {
-  it('success', async () => {
+  it.skip('success', async () => {
     const spyOn = jest.spyOn(console, 'log');
     (axios as jest.Mocked<typeof axios>).get.mockResolvedValueOnce('success data');
     await main();
@@ -10,7 +10,7 @@ describe('main', () => {
     spyOn.mockRestore();
   });
 
-  it('error', async () => {
+  it.skip('error', async () => {
     const spyOn = jest.spyOn(console, 'log');
     (axios as jest.Mocked<typeof axios>).get.mockRejectedValueOnce(new Error('some error'));
     await main();

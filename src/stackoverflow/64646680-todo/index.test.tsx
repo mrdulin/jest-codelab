@@ -10,7 +10,7 @@ jest.mock('react', () => {
 });
 
 describe('64646680', () => {
-  it('should pass', () => {
+  it.skip('should pass', () => {
     const mDivRef = { current: { addEventListener: jest.fn() } };
     (useRef as any).mockReturnValue(mDivRef);
     const { getByTestId } = render(<SomeComponent></SomeComponent>);

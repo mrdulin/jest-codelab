@@ -20,7 +20,7 @@ jest.mock('./service.ts', () => {
 });
 
 describe('Service', () => {
-  it('should do something', () => {
+  it.skip('should do something', () => {
     service.get = jest.fn().mockReturnValueOnce('mocked data');
     const actualValue = service.doThis();
     expect(actualValue).toBe('mocked data');

@@ -16,11 +16,11 @@ describe('59741487', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
-  it('should render', () => {
+  it.skip('should render', () => {
     expect(wrapper.find('form')).toBeTruthy();
   });
   describe('#handleSubmit', () => {
-    it('should login', () => {
+    it.skip('should login', () => {
       mFormValidation.mockReturnValueOnce(true);
       const mEvent = { preventDefault: jest.fn() };
       wrapper.find('form').simulate('submit', mEvent);
@@ -28,7 +28,7 @@ describe('59741487', () => {
       expect(mLogin).toHaveBeenCalledTimes(1);
     });
 
-    it('should handle error', () => {
+    it.skip('should handle error', () => {
       mFormValidation.mockReturnValueOnce(false);
       const mEvent = { preventDefault: jest.fn() };
       wrapper.find('form').simulate('submit', mEvent);
