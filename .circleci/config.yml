@@ -1,0 +1,36 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.7
+
+jobs:
+  setup-codeclimate-test-coverage:
+    docker:
+      - image: cimg/node:16.10
+    environment:
+      CC_TEST_REPORTER_ID: 29e282c4ad6cea6cb8b2d84731d4e33d173beea23cbd46171b2b559a11c94ffe
+    steps:
+      - checkout
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - restore_cache:
+          keys:
+            - v1-npm-deps-{{ checksum "yarn.lock" }}
+            - v1-npm-deps-
+      - run:
+          name: Yarn Install
+          command: yarn install
+      - run:
+          name: Yarn Test
+          command: yarn test
+      - run:
+          name: Run CC Test Reporter after-build
+          command: ./cc-test-reporter after-build
+
+workflows:
+  sample:
+    jobs:
+      - setup-codeclimate-test-coverage

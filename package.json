@@ -4,7 +4,7 @@
   "description": "Learning javascript unit test framework - Jest by examples",
   "main": "",
   "scripts": {
-    "test": "jest --detectOpenHandles --coverage",
+    "test": "jest --coverage --maxWorkers=2",
     "test:rewire": "ts-node -O '{\"module\":\"commonjs\"}' node_modules/jest/bin/jest.js",
     "test:w": "jest --watch",
     "test:coverage": "npm t --coverage",
